@@ -64,4 +64,71 @@
     outline: none;
     font-size: 16px;
 }
+.naslov-timovi {
+    text-align: center;
+    color: #15151e;
+    
+}
+
+.kartice{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    max-width: 1200px;
+
+}
+
+
+.f1-kartica {
+    background-color:grey;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.kartica-unutrasnjost {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.f1-kartica:hover .kartica-unutrasnjost {
+    transform: rotateY(180deg);
+}
+
+.kartica-naprijed, .kartica-nazad {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+.kartica-naprijed {
+    background-color: white;
+    color: black;
+}
+
+.kartica-nazad {
+    background-color: #e10600;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.kartica-nazad ul {
+    list-style: none;
+    padding: 0;
+}
+
+.kartica-nazad li {
+    font-size: 1.2rem;
+}
+.kartica-naprijed img {
+    width: 150px;
+    height: 150px;
+    
+}
 
