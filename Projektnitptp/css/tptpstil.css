@@ -1,1 +1,86 @@
+<link rel="stylesheet" href="css/tptpstil.css">
 
+.glavni-header {
+    background-color: #15151e; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+   
+    border-bottom: 3px solid #e10600;
+}
+
+.logo-sekcija {
+    display: flex;
+}
+
+.logo-img {
+    height: 90px;
+    width: auto;
+}
+
+.site-title {
+    color: white;
+}
+
+.navigacija {
+    display: flex;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white;
+}
+.pocetna-sekcija {
+    
+    background-image: url('../images/glavnaslika.webp'); 
+    background-size: cover;      
+    background-position: center; 
+    height: 650px;                
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pocetni-tekst {
+    max-width: 600px; 
+}
+
+
+.search-baar {
+    text-align: center;
+
+}
+
+#searchtimova {
+    width: 300px;
+    border: 2px
+    font-size: 16px;
+}
+.naslov-timovi {
+    text-align: center;
+    color: #15151e;
+    
+}
+
+.kartice{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    max-width: 1200px;
+
+}
+
+
+.f1-kartica {
+    background-color:grey;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
