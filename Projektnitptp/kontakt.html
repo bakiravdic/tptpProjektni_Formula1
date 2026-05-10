@@ -145,6 +145,61 @@
         <h3 class="rezultat">Total: <span id="suma">25</span> points</h3>
     </div>
 </section>
+
+<section class="newsletter-sekcija">
+    <div class="form-kontejner">
+        <h2>Join Our Newsletter</h2>
+        <p>Stay updated with the latest F1 insights!</p>
+        
+        <form id="newsletter-forma">
+            <div class="polje">
+                <label>First Name:</label>
+                <input type="text" placeholder="Your Name" required>
+            </div>
+
+            <div class="polje">
+                <label>Last Name:</label>
+                <input type="text" placeholder="Your Last Name" required>
+            </div>
+
+            <div class="polje">
+                <label>Email Address:</label>
+                <input type="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="polje">
+                <label>Favorite Team:</label>
+                <select required>
+                    <option value="">Select a team</option>
+                    <option value="redbull">Red Bull Racing</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mclaren">McLaren</option>
+                </select>
+            </div>
+
+            <div class="polje">
+                <label>Country:</label>
+                <input type="text" placeholder="Bosnia and Herzegovina" required>
+            </div>
+
+            <div class="polje">
+                <label>Age:</label>
+                <input type="number" min="13" max="99" placeholder="Your Age" required>
+            </div>
+
+            <button type="submit" class="f1-btn">Subscribe Now</button>
+        </form>
+
+        <div id="poruka-zahvale" style="display: none;">
+            <h3>Thank you for subscribing!</h3>
+            <p>Welcome to the Paddock. Check your email soon.</p>
+        </div>
+
+    </div>
+</section>
+
+<script src="js/tptpskripte.js"></script>
 <script src="js/tptpskripte.js"></script>
 
 </body>
