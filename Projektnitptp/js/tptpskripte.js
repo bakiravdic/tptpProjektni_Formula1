@@ -10,6 +10,21 @@ function izracunaj() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+
+    const searchInput = document.getElementById('searchtimova');
+    const teamCards = document.querySelectorAll('.f1-kartica');
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase().trim();
+            teamCards.forEach(card => {
+                const teamName = card.getAttribute('data-team') || "";
+                card.style.display = teamName.toLowerCase().includes(filter) ? "" : "none";
+            });
+        });
+    }
+
+    
     const forma = document.getElementById('newsletter-forma');
     const poruka = document.getElementById('poruka-zahvale');
     console.log("!!!!!!!");
