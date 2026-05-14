@@ -23,7 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
+    
+    const btn = document.getElementById('play-sound');
+    const sound = document.getElementById('f1-sound');
+    if (btn && sound) {
+        btn.addEventListener('click', () => {
+            sound.currentTime = 0;
+            sound.play();
+        });
+    }
     
     const forma = document.getElementById('newsletter-forma');
     const poruka = document.getElementById('poruka-zahvale');
@@ -32,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (forma && poruka) {
         forma.addEventListener('submit', function(event) {
             event.preventDefault();
-            forma.style.display = 'none'; /
+            forma.style.display = 'none'; 
             poruka.style.display = 'block'; 
             console.log("Forma radiii!");
         });
