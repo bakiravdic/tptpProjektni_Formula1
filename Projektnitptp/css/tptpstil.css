@@ -1,190 +1,68 @@
-<link rel="stylesheet" href="css/tptpstil.css">
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap');
 
-.glavni-header {
-    background-color: #15151e; 
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-   
-    border-bottom: 3px solid #e10600;
-}
+:root{
 
-.logo-sekcija {
-    display: flex;
-}
+    /* glavna paleta */
 
-.logo-img {
-    height: 90px;
-    width: auto;
-}
+    --main-bg:#0B0E11;
+    --card-bg:#1F242D;
+    --accent:#E10600;
+    --accent-dark:#8B0000;
+    --secondary-bg:#161B22;
 
-.site-title {
-    color: white;
-}
+    /* tekst */
 
-.navigacija {
-    display: flex;
-}
+    --text-main:#FFFFFF;
+    --text-secondary:#D1D1D1;
 
-.nav-btn {
-    text-decoration: none;
-    color: white;
-}
-.pocetna-sekcija {
-    
-    background-image: url('../images/glavnaslika.webp'); 
-    background-size: cover;      
-    background-position: center; 
-    height: 650px;                
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    /* stakleni efekat */
 
-.pocetni-tekst {
-    max-width: 600px; 
+    --glass-bg:rgba(255,255,255,0.05);
+
+    /* font */
+
+    --font-main:'Orbitron', sans-serif;
+
+    /* spacing */
+
+    --container-width:95%;
+    --section-padding:6rem;
+
+    /* tranzicije */
+
+    --transition:0.3s ease;
+
+    /* shadow */
+
+    --shadow-soft:
+    0 10px 25px rgba(0,0,0,0.25);
+
+    --shadow-hover:
+    0 18px 40px rgba(0,0,0,0.45);
+
+    /* 
+       ZVANIČNE BOJE TIMOVA
+       Svaka kartica koristi svoj akcent kroz border,
+       glow i hover efekat.
+    */
+
+    --ferrari:#E60000;
+
+    --mercedes:#00A19B;
+
+    --mclaren:#FF8000;
+
+    --redbull:#0B132B;
+
+    --aston:#004F41;
+
+    --alpine:#005BA3;
+
+    --williams:#002D62;
+
+    --audi:#EE1E46;
+
+    --cadillac:#1A365D;
 }
-
-
-.search-baar {
-    text-align: center;
-
-}
-
-#searchtimova {
-    width: 300px;
-    border: 2px
-    font-size: 16px;
-}
-.naslov-timovi {
-    text-align: center;
-    color: #15151e;
-    
-}
-
-.kartice{
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    max-width: 1200px;
-
-}
-
-
-.f1-kartica {
-    background-color:grey;
-    width: 250px;
-    height: 350px;
-    perspective: 1000px;
-}
-
-.kartica-unutrasnjost {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-.f1-kartica:hover .kartica-unutrasnjost {
-    transform: rotateY(180deg);
-}
-
-.kartica-naprijed, .kartica-nazad {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-.kartica-naprijed {
-    background-color: white;
-    color: black;
-}
-
-.kartica-nazad {
-    background-color: #e10600;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.kartica-nazad ul {
-    list-style: none;
-    padding: 0;
-}
-
-.kartica-nazad li {
-    font-size: 1.2rem;
-}
-.kartica-naprijed img {
-    width: 150px;
-    height: 150px;
-    
-}
-
-.sadrzaj-kontejner {
-    max-width: 1200px;
-}
-
-.sadrzaj-header {
-    text-align: center;
-}
-
-.sadrzaj-grid {
-    display: flex;
-}
-
-.glavni-clanak {
-    flex: 2;
-}
-
-.clanak-sekcija {
-    margin-bottom: 40px;
-}
-
-.clanak-sekcija h2 {
-}
-
-.clanak-slika {
-    width: 100%;
-    border-radius: 10px;
-}
-
-
-.sadrzaj-sidebar {
-    flex: 1;
-}
-
-.info-kartica {
-    background: var(--card-bg);
-}
-
-.red-card {
-    border-left: 5px solid #e10600;
-}
-
-.spec-lista {
-    list-style: none;
-    padding: 0;
-}
-
-.spec-lista li {
-    padding: 10px 0;
-    border-bottom: 1px solid #333;
-}
-@media (max-width: 768px) {
-    .sadrzaj-grid {
-        flex-direction: column;
-    }
+    --haas:#FFFFFF;
 }
