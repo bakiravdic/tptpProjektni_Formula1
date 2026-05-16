@@ -1,50 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap');
+/* =========================================================
+   AI DOKUMENTACIJA
+   tptpstil.css
+
+   OVA VERZIJA CSS-a JE AŽURIRANA
+   PREMA NOVIM ZAHTJEVIMA.
+
+   IZMJENE:
+   - Header i footer koriste nijansu tamniju od #0B0E11
+   - Zamijenjene pozicije video sekcije i engine sekcije
+   - Video spušten niže radi profesionalnog spacinga
+   - Zadržan kompletan responsive sistem
+   - Hover efekti kartica ostavljeni netaknuti
+   - Hero sekcija ostavljena dominantna
+   - Footer balans ostavljen profesionalan
+
+   HTML STRUKTURA NIJE MIJENJANA.
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONT IMPORT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&display=swap');
+
+
+/* =========================================================
+   ROOT VARIJABLE
+========================================================= */
 
 :root{
 
-    /* glavna paleta */
+    /* =====================================================
+       GLAVNE BOJE
+
+       Header i footer koriste nijansu
+       tamniju od #0B0E11 kako bi dizajn
+       izgledao elegantnije i dublje.
+    ===================================================== */
 
     --main-bg:#0B0E11;
-    --card-bg:#1F242D;
-    --accent:#E10600;
-    --accent-dark:#8B0000;
-    --secondary-bg:#161B22;
 
-    /* tekst */
+    --header-bg:#06080A;
+
+    --footer-bg:#06080A;
+
+    --card-bg:#1F242D;
+
+    --secondary-bg:#11151B;
+
+    --accent:#E10600;
+
+    --accent-dark:#8B0000;
+
+    /* =====================================================
+       TEKST
+    ===================================================== */
 
     --text-main:#FFFFFF;
-    --text-secondary:#D1D1D1;
 
-    /* stakleni efekat */
+    --text-secondary:#D7D7D7;
+
+    /* =====================================================
+       GLASS EFEKAT
+    ===================================================== */
 
     --glass-bg:rgba(255,255,255,0.05);
 
-    /* font */
+    /* =====================================================
+       FONT
+    ===================================================== */
 
     --font-main:'Orbitron', sans-serif;
 
-    /* spacing */
+    /* =====================================================
+       GLOBALNI SPACING
+    ===================================================== */
 
     --container-width:95%;
+
     --section-padding:6rem;
 
-    /* tranzicije */
+    /* =====================================================
+       TRANZICIJE
+    ===================================================== */
 
-    --transition:0.3s ease;
+    --transition:0.35s ease;
 
-    /* shadow */
+    /* =====================================================
+       SJENE
+    ===================================================== */
 
     --shadow-soft:
     0 10px 25px rgba(0,0,0,0.25);
 
     --shadow-hover:
-    0 18px 40px rgba(0,0,0,0.45);
+    0 20px 45px rgba(0,0,0,0.5);
 
-    /* 
-       ZVANIČNE BOJE TIMOVA
-       Svaka kartica koristi svoj akcent kroz border,
-       glow i hover efekat.
-    */
+    /* =====================================================
+       TEAM BOJE
+    ===================================================== */
 
     --ferrari:#E60000;
 
@@ -52,17 +107,1469 @@
 
     --mclaren:#FF8000;
 
-    --redbull:#0B132B;
+    --redbull:#1B2951;
 
-    --aston:#004F41;
+    --aston:#005F4D;
 
     --alpine:#005BA3;
 
-    --williams:#002D62;
+    --williams:#003A80;
 
     --audi:#EE1E46;
 
     --cadillac:#1A365D;
+
+    --haas:#BDBDBD;
 }
-    --haas:#FFFFFF;
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--main-bg);
+
+    color:var(--text-main);
+
+    font-family:var(--font-main);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+    animation:fadeInBody 1s ease;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+section{
+    padding:var(--section-padding) 0;
+}
+
+h1,h2,h3,h4,
+p,
+a,
+li,
+span,
+button{
+    font-family:var(--font-main);
+}
+
+
+/* =========================================================
+   BODY FADE ANIMACIJA
+========================================================= */
+
+@keyframes fadeInBody{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* =========================================================
+   HERO ANIMACIJA
+========================================================= */
+
+@keyframes heroFadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(55px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SCALE-IN ANIMACIJA
+========================================================= */
+
+@keyframes scaleInCard{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        scale(0.84);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        scale(1);
+    }
+}
+
+
+/* =========================================================
+   FADE LEFT
+========================================================= */
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(-70px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+    }
+}
+
+
+/* =========================================================
+   FADE RIGHT
+========================================================= */
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(70px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+    }
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+@keyframes scrollReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+
+/* =========================================================
+   PULSE GLOW
+========================================================= */
+
+@keyframes pulseGlow{
+
+    0%{
+        box-shadow:0 0 0 rgba(225,6,0,0);
+    }
+
+    50%{
+        box-shadow:0 0 20px rgba(225,6,0,0.45);
+    }
+
+    100%{
+        box-shadow:0 0 0 rgba(225,6,0,0);
+    }
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.glavni-header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(6,8,10,0.94);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    padding:16px 4%;
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+
+    transition:var(--transition);
+}
+
+.glavni-header hr{
+    display:none;
+}
+
+
+/* =========================================================
+   LOGO SEKCIJA
+========================================================= */
+
+.logo-sekcija{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    z-index:2;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.logo-sekcija:hover,
+.logo-sekcija:active{
+
+    color:var(--accent);
+
+    opacity:0.9;
+}
+
+.logo-sekcija:hover .site-title,
+.logo-sekcija:active .site-title{
+
+    color:var(--accent);
+}
+
+.logo-sekcija:hover img,
+.logo-sekcija:active img{
+
+    filter:
+    drop-shadow(0 0 10px rgba(225,6,0,0.5));
+}
+
+.logo-img{
+    width:60px;
+}
+
+.site-title{
+
+    color:var(--text-main);
+
+    font-size:1.35rem;
+
+    font-weight:900;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    transition:var(--transition);
+}
+
+
+/* =========================================================
+   NAVIGACIJA
+========================================================= */
+
+.navigacija{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2.2rem;
+}
+
+.nav-btn{
+
+    text-decoration:none;
+
+    color:var(--text-main);
+
+    position:relative;
+
+    transition:var(--transition);
+
+    font-size:0.92rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+}
+
+.nav-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+
+    height:2px;
+
+    background:var(--accent);
+
+    transition:var(--transition);
+}
+
+.nav-btn:hover::after,
+.nav-btn:focus::after{
+    width:100%;
+}
+
+.nav-btn:hover,
+.nav-btn:focus{
+    color:var(--accent);
+}
+
+.nav-btn[href="index.html"]{
+    color:var(--accent);
+}
+
+
+/* =========================================================
+   HERO SEKCIJA
+========================================================= */
+
+.pocetna-sekcija{
+
+    position:relative;
+
+    height:95vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.52),
+    rgba(0,0,0,0.72)
+    ),
+    url("../images/glavnaslika.webp");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.overlay{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:2rem 4rem;
+}
+
+.pocetni-tekst{
+
+    max-width:980px;
+
+    text-align:center;
+
+    animation:
+    heroFadeUp 1s ease-out;
+}
+
+.pocetni-tekst p{
+
+    color:var(--text-main);
+
+    font-size:1.15rem;
+
+    line-height:2.1;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+    0 0 25px rgba(0,0,0,0.7);
+}
+
+
+/* =========================================================
+   TEAM SEKCIJA
+========================================================= */
+
+.timovi{
+
+    background:transparent;
+
+    padding-top:7rem;
+}
+
+
+/* =========================================================
+   NASLOVI
+========================================================= */
+
+.naslov-timova,
+.motori-meni h3{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    font-weight:900;
+
+    color:var(--text-main);
+
+    margin-bottom:4rem;
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    padding:0 1rem;
+
+    line-height:1.3;
+}
+
+.naslov-timova::after,
+.motori-meni h3::after{
+    display:none;
+}
+
+.naslov-timova{
+
+    animation:
+    fadeLeft linear;
+
+    animation-timeline:view();
+
+    animation-range:
+    entry 0% cover 35%;
+}
+
+.motori-meni h3{
+
+    animation:
+    fadeRight linear;
+
+    animation-timeline:view();
+
+    animation-range:
+    entry 0% cover 35%;
+}
+
+
+/* =========================================================
+   SEARCH BAR
+========================================================= */
+
+.search-baar{
+
+    width:var(--container-width);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:4rem;
+}
+
+.search-baar input{
+
+    width:100%;
+    max-width:450px;
+
+    padding:1rem 1.2rem;
+
+    background:transparent;
+
+    border:none;
+
+    border-bottom:
+    2px solid rgba(255,255,255,0.25);
+
+    outline:none;
+
+    color:var(--text-main);
+
+    transition:var(--transition);
+}
+
+.search-baar input:focus{
+    border-color:var(--accent);
+}
+
+
+/* =========================================================
+   GRID KARTICA
+========================================================= */
+
+.kartice{
+
+    width:var(--container-width);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:1.6rem;
+}
+
+
+/* =========================================================
+   TEAM KARTICE
+========================================================= */
+
+.f1-kartica{
+
+    background:var(--glass-bg);
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    min-height:380px;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:var(--shadow-soft);
+
+    transition:var(--transition);
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    animation:
+    scaleInCard linear;
+
+    animation-timeline:view();
+
+    animation-range:
+    entry 0% cover 30%;
+}
+
+.f1-kartica:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+    color:#fff;
+}
+
+.kartica-unutrasnjost{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+
+/* =========================================================
+   PREDNJA STRANA
+========================================================= */
+
+.kartica-naprijed{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:2rem;
+}
+
+.kartica-naprijed img{
+
+    width:100%;
+
+    height:150px;
+
+    object-fit:contain;
+
+    transition:var(--transition);
+
+    mix-blend-mode:screen;
+}
+
+.f1-kartica:hover .kartica-naprijed img{
+
+    transform:scale(1.05);
+}
+
+.kartica-naprijed p{
+
+    margin-top:1rem;
+
+    color:var(--text-main);
+
+    font-size:0.92rem;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   ZADNJA STRANA
+========================================================= */
+
+.kartica-nazad{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.kartica-nazad p{
+
+    color:var(--text-secondary);
+
+    margin-bottom:1rem;
+
+    font-size:0.8rem;
+
+    letter-spacing:2px;
+}
+
+.kartica-nazad ul{
+    list-style:none;
+}
+
+.kartica-nazad li{
+
+    color:var(--text-main);
+
+    font-size:0.82rem;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   TEAM HOVER BOJE
+========================================================= */
+
+.f1-kartica:nth-child(1):hover{
+    background:rgba(11,19,43,0.8);
+    border-color:var(--redbull);
+}
+
+.f1-kartica:nth-child(2):hover{
+    background:rgba(0,91,163,0.8);
+    border-color:var(--alpine);
+}
+
+.f1-kartica:nth-child(3):hover{
+    background:rgba(0,79,65,0.8);
+    border-color:var(--aston);
+}
+
+.f1-kartica:nth-child(4):hover{
+    background:rgba(238,30,70,0.8);
+    border-color:var(--audi);
+}
+
+.f1-kartica:nth-child(5):hover{
+    background:rgba(26,54,93,0.8);
+    border-color:var(--cadillac);
+}
+
+.f1-kartica:nth-child(6):hover{
+    background:rgba(230,0,0,0.8);
+    border-color:var(--ferrari);
+}
+
+.f1-kartica:nth-child(7):hover{
+    background:rgba(180,180,180,0.25);
+    border-color:var(--haas);
+}
+
+.f1-kartica:nth-child(8):hover{
+    background:rgba(255,128,0,0.8);
+    border-color:var(--mclaren);
+}
+
+.f1-kartica:nth-child(9):hover{
+    background:rgba(0,161,155,0.8);
+    border-color:var(--mercedes);
+}
+
+.f1-kartica:nth-child(10):hover{
+    background:rgba(0,45,98,0.8);
+    border-color:var(--williams);
+}
+
+
+/* =========================================================
+   ENGINE SEKCIJA
+
+   Engine sekcija sada ide PRIJE videa.
+========================================================= */
+
+.info-mot{
+
+    width:var(--container-width);
+
+    margin:auto;
+
+    margin-top:5rem;
+
+    background:transparent;
+
+    border:none;
+
+    border-radius:0;
+
+    padding:0;
+
+    backdrop-filter:none;
+
+    box-shadow:none;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.motori-meni{
+
+    width:100%;
+
+    background:transparent;
+}
+
+
+/* =========================================================
+   ENGINE GRID
+========================================================= */
+
+.engine-linkovi{
+
+    list-style:none;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:1.8rem;
+
+    animation:
+    fadeRight linear;
+
+    animation-timeline:view();
+
+    animation-range:
+    entry 0% cover 35%;
+}
+
+
+/* =========================================================
+   ENGINE KARTICE
+========================================================= */
+
+.engine-linkovi li a{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    min-height:260px;
+
+    text-align:center;
+
+    padding:2rem;
+
+    text-decoration:none;
+
+    color:var(--text-main);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    background-size:cover;
+
+    background-position:center;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-soft);
+
+    text-shadow:
+    0 4px 10px rgba(0,0,0,0.95),
+    0 0 20px rgba(0,0,0,0.9);
+}
+
+.engine-linkovi li a span{
+
+    background:
+    rgba(0,0,0,0.38);
+
+    padding:
+    0.7rem 1.2rem;
+
+    border-radius:10px;
+
+    backdrop-filter:blur(4px);
+}
+
+.engine-linkovi li a::before,
+.engine-linkovi li a::after{
+    display:none;
+}
+
+.engine-linkovi li a:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.02);
+
+    box-shadow:
+    0 0 30px rgba(225,6,0,0.35);
+}
+
+
+/* =========================================================
+   ENGINE SLIKE
+========================================================= */
+
+.engine-linkovi li:nth-child(1) a{
+
+    background-image:
+    url("../images/redbull1.jpg");
+}
+
+.engine-linkovi li:nth-child(2) a{
+
+    background-image:
+    url("/images/ferrari.jpg");
+}
+
+.engine-linkovi li:nth-child(3) a{
+
+    background-image:
+    url("../images/mercedes1.jpg");
+}
+
+.engine-linkovi li:nth-child(4) a{
+
+    background-image:
+    url("../images/audi4.jpg");
+
+    background-position:
+    center bottom;
+}
+
+.engine-linkovi li:nth-child(5) a{
+
+    background-image:
+    url("../images/honda.webp");
+}
+
+.engine-linkovi li:nth-child(6) a{
+
+    background-image:
+    url("../images/alpine5.webp");
+}
+
+
+/* =========================================================
+   VIDEO SEKCIJA
+
+   Video sada ide ISPOD motora
+   i spušten je dodatno radi
+   profesionalnog razmaka.
+========================================================= */
+
+.desni-sidebar{
+
+    width:100vw;
+
+    margin-left:
+    calc(50% - 50vw);
+
+    margin-top:7rem;
+
+    margin-bottom:5rem;
+
+    position:relative;
+
+    z-index:1;
+
+    background:transparent;
+}
+
+
+/* =========================================================
+   VIDEO KONTEJNER
+========================================================= */
+
+.video-kontejner{
+
+    position:relative;
+
+    width:100vw;
+
+    height:72vh;
+
+    min-height:650px;
+
+    max-height:700px;
+
+    overflow:hidden;
+
+    border:none;
+
+    animation:
+    fadeLeft linear;
+
+    animation-timeline:view();
+
+    animation-range:
+    entry 0% cover 35%;
+}
+
+.video-kontejner iframe{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    border:none;
+}
+
+.motori{
+
+    text-align:center;
+
+    color:var(--text-secondary);
+
+    margin-top:1.2rem;
+
+    font-size:0.9rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   SADRŽAJ STRANICA
+========================================================= */
+
+.sadrzaj-kontejner,
+.ranking-lista-sekcija,
+.kalkulator-sekcija,
+.raspored-sekcija,
+.volan-sekcija{
+
+    width:var(--container-width);
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   GRID SADRŽAJA
+========================================================= */
+
+.sadrzaj-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:2rem;
+}
+
+.glavni-clanak,
+.info-kartica,
+.control-card,
+.calc-box,
+.ranking-stavka{
+
+    background:rgba(255,255,255,0.04);
+
+    padding:2rem;
+
+    border-radius:10px;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-soft);
+
+    border:
+    1px solid rgba(255,255,255,0.05);
+}
+
+
+/* =========================================================
+   BUTTON STIL
+========================================================= */
+
+button,
+.f1-btn{
+
+    background:var(--accent);
+
+    color:var(--text-main);
+
+    border:none;
+
+    padding:1rem 2rem;
+
+    border-radius:4px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    animation:pulseGlow 3s infinite;
+}
+
+button:hover,
+.f1-btn:hover{
+
+    background:var(--accent-dark);
+
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:var(--footer-bg);
+
+    margin-top:1.5rem;
+
+    padding:4rem 4% 1.4rem;
+
+    border-top:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.footer-sadrzaj{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:3rem;
+
+    flex-wrap:wrap;
+}
+
+.footer-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.2rem;
+}
+
+.footer-section h3{
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   DRUŠTVENE MREŽE
+========================================================= */
+
+.socijalne-mreze{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+}
+
+.socijalne-mreze a{
+
+    text-decoration:none;
+
+    color:var(--text-secondary);
+
+    transition:var(--transition);
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.socijalne-mreze a:hover{
+
+    color:var(--accent);
+
+    transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   FOOTER LINKOVI
+========================================================= */
+
+.footer-section a{
+
+    text-decoration:none;
+
+    color:var(--text-secondary);
+
+    transition:var(--transition);
+
+    letter-spacing:2px;
+}
+
+.footer-section a:hover{
+
+    color:var(--accent);
+}
+
+
+/* =========================================================
+   THEME SWITCHER
+========================================================= */
+
+#theme-switcher{
+
+    margin-left:auto;
+
+    padding:1rem 1.2rem;
+
+    background:rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    color:var(--text-main);
+
+    border-radius:10px;
+
+    outline:none;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footer-bottom{
+
+    margin-top:1.5rem;
+
+    padding-top:1rem;
+
+    padding-bottom:0.2rem;
+
+    border-top:
+    1px solid rgba(255,255,255,0.08);
+
+    text-align:center;
+
+    color:var(--text-secondary);
+
+    font-size:0.85rem;
+}
+
+.footer-bottom p{
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:0;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+@media(prefers-color-scheme:dark){
+
+    body{
+
+        background:var(--main-bg);
+
+        color:var(--text-main);
+    }
+
+    .glavni-header{
+
+        background:rgba(6,8,10,0.94);
+    }
+
+    footer{
+
+        background:#06080A;
+    }
+}
+
+
+/* =========================================================
+   TABLET BREAKPOINT
+========================================================= */
+
+@media(max-width:900px){
+
+    .kartice{
+
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .engine-linkovi{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .video-kontejner{
+
+        min-height:520px;
+
+        height:58vh;
+    }
+
+    .glavni-header{
+
+        flex-direction:column;
+
+        gap:1rem;
+    }
+
+    .navigacija{
+
+        position:static;
+
+        transform:none;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .footer-sadrzaj{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    #theme-switcher{
+
+        margin-left:0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE BREAKPOINT
+========================================================= */
+
+@media(max-width:600px){
+
+    section{
+        padding:4rem 0;
+    }
+
+    .kartice{
+        grid-template-columns:1fr;
+    }
+
+    .engine-linkovi{
+        grid-template-columns:1fr;
+    }
+
+    .overlay{
+        padding:1.5rem;
+    }
+
+    .pocetna-sekcija{
+
+        height:88vh;
+    }
+
+    .pocetni-tekst p{
+
+        font-size:0.92rem;
+
+        line-height:1.9;
+
+        letter-spacing:2px;
+    }
+
+    .naslov-timova,
+    .motori-meni h3{
+
+        font-size:2rem;
+
+        letter-spacing:5px;
+    }
+
+    .video-kontejner{
+
+        min-height:360px;
+
+        max-height:none;
+
+        height:48vh;
+    }
+
+    .footer-sadrzaj{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .socijalne-mreze{
+
+        align-items:center;
+    }
+
+    .navigacija{
+
+        gap:1rem;
+    }
+
+    .footer-bottom p{
+
+        letter-spacing:2px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP BREAKPOINT
+========================================================= */
+
+@media(min-width:901px){
+
+    .kartice{
+
+        grid-template-columns:
+        repeat(5,1fr);
+    }
 }
