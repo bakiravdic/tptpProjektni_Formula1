@@ -45,4 +45,34 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Forma radiii!");
         });
     }
+
+    const otvoriBtn = document.getElementById('otvoriBugBtn');
+const formaKontejner = document.getElementById('bugFormaKontejner');
+const sadrzajForme = document.getElementById('bugSadrzajForme');
+const posaljiBtn = document.getElementById('posaljiBugBtn');
+const zahvalnica = document.getElementById('bugZahvalnica');
+const tekstPolje = document.getElementById('bugTekst');
+
+
+otvoriBtn.addEventListener('click', () => {
+    if (formaKontejner.style.display === 'none') {
+        formaKontejner.style.display = 'block';
+       
+        sadrzajForme.style.display = 'block';
+        zahvalnica.style.display = 'none';
+        tekstPolje.value = ''; 
+    } else {
+        formaKontejner.style.display = 'none';
+    }
+});
+
+
+posaljiBtn.addEventListener('click', () => {
+    if (tekstPolje.value.trim() !== "") { 
+        sadrzajForme.style.display = 'none';
+        zahvalnica.style.display = 'block';
+    } else {
+        alert("Please enter the the text of the issue before sending an issue!");
+    }
+});
 });
