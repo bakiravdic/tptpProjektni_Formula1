@@ -200,3 +200,10 @@ themeSwitcher.addEventListener("change", () => {
         localStorage.setItem("theme", "system");
     }
 });
+/*- Gemini: Pomogo mi je u debugiranje JavaScript koda i rješavanje sintaksnog konflikta. 
+Pomoć pri lociranju pogrešno zatvorenih vitičastih zagrada koje su blokirale izvršavanje skripte,
+te uspješno izolovanje i popravka "Jump to Top" mehanizma za glatko skrolovanje na vrh stranice..*/
+
+
+
+
