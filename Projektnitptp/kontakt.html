@@ -28,7 +28,7 @@
 <section class="ranking-lista-sekcija">
     <div class="ranking-header">
         <h2>Driver Standings</h2>
-        <p class="sezona-tag">2025 Season Results (Project Version)</p>
+        <p class="sezona-tag">2025 Season Results</p>
     </div>
 
     <ul class="f1-ranking-lista">
@@ -123,7 +123,6 @@
 
 <section class="f1-galerija-sekcija">
     <div class="galerija-header"> <h2>2025 Season Highlights</h2>
-        <p class="sezona-tag">Capturing the most iconic moments</p>
     </div>
 
     <div class="galerija-kontejner">
@@ -169,22 +168,22 @@
         <form id="newsletter-forma">
             <div class="polje">
                 <label>First Name:</label>
-                <input type="text" placeholder="Your Name" required>
+                <input type="text" id="newsletter-fname" placeholder="Your Name">
             </div>
 
             <div class="polje">
                 <label>Last Name:</label>
-                <input type="text" placeholder="Your Last Name" required>
+                <input type="text" id="newsletter-lname" placeholder="Your Last Name">
             </div>
 
             <div class="polje">
                 <label>Email Address:</label>
-                <input type="email" placeholder="example@email.com" required>
+                <input type="text" id="newsletter-email" placeholder="example@email.com">
             </div>
 
             <div class="polje">
                 <label>Favorite Team:</label>
-                <select required>
+                <select id="newsletter-team">
                     <option value="">Select a team</option>
                     <option value="redbull">Red Bull Racing</option>
                     <option value="mercedes">Mercedes</option>
@@ -195,12 +194,12 @@
 
             <div class="polje">
                 <label>Country:</label>
-                <input type="text" placeholder="Bosnia and Herzegovina" required>
+                <input type="text" id="newsletter-country" placeholder="Bosnia and Herzegovina">
             </div>
 
             <div class="polje">
                 <label>Age:</label>
-                <input type="number" min="13" max="99" placeholder="Your Age" required>
+                <input type="text" id="newsletter-age" placeholder="Your Age">
             </div>
 
             <button type="submit" class="f1-btn">Subscribe Now</button>
@@ -221,7 +220,7 @@
         <div id="bugSadrzajForme">
             <h3>Report a bug on the page</h3>
             <textarea id="bugTekst" rows="4" placeholder="Report the issue on the page..."></textarea>
-            <button id="posaljiBugBtn" class="bug-akcija-btn">Pošalji</button>
+            <button id="posaljiBugBtn" class="bug-akcija-btn">Send</button>
         </div>
 
         <div id="bugZahvalnica" style="display: none;">
