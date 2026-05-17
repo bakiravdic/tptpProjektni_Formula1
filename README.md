@@ -6,7 +6,7 @@ Ovaj projekat predstavlja interaktivnu web stranicu posvećenu Formuli 1, razvij
 ## Članovi grupe
 | Ime i prezime | GitHub | Zaduzenje |
 | Bakir Avdić | @bakir.avdic | JavaScript + Logika + HTML |
-| Azra Mujkanović | @azra.mujkanovic | CSS + Dizajn |
+| Azra Mujkanović | @azra.mujkanovic | CSS + Dizajn + JavaScript |
 
 ## Tehnologije
 - HTML5 (Struktura i Image Map koncepti)
