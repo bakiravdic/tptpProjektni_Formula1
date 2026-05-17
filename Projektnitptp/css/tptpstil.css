@@ -1145,6 +1145,46 @@ button:hover,
     align-items:center;
 }
 
+.volan-slika-box {
+    position: relative; 
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+}
+
+.map-link {
+    position: absolute;
+    border-radius: 50%; 
+    cursor: pointer;
+    z-index: 10;
+}
+
+.drs-zona {
+    top: 25.5%;
+    left: 13.5%;
+    width: 5%;
+    height: 5%;
+}
+
+.radio-zona {
+    top: 50.5%;
+    left: 68.5%;
+    width: 5%;
+    height: 5%;
+}
+
+.engine-zona {
+    top: 54%;
+    left: 44%;
+    width: 12%;
+    height: 12%;
+}
+/*5 blokova iznad mi je uradio gemini, al ja u potpunosti razumijem kod, svjestan sam da je
+umjesto fiksnih piksela koji bježe na mobilnim ekranima, zone za klik 
+su pozicionirane pomoću procenata (%) u odnosu na .volan-slika-box.
+komentar je napisao Bakir
+*/
+
 .volan-slika-box img{
     width:100%;
     max-width:720px;
