@@ -10,11 +10,12 @@ Ovaj projekat predstavlja interaktivnu web stranicu posvećenu Formuli 1, razvij
 
 ## Tehnologije
 - HTML5 (Struktura i Image Map koncepti)
-- CSS3 
+- CSS3 (Varijable, grid, animacije, responzivnost, teme)
 - JavaScript (Manipulacija DOM-om, ručna validacija formi i event listeneri, bez biblioteka)
 
 ## AI alati koristeni u projektu
 - Gemini: Proračun tačnih koordinata za interaktivne zone na slici volana, optimizacija JavaScript koda.
+- Claude: Pomoć pri poboljšanju koda za light/dark mode i pomoćpri poboljšanju funkcionalnosti menija za mobilne uređaje
 
 ## Napomene
 Audio snimak preuzet je sa stranice ZEDGE i ujedno je besplatan.
