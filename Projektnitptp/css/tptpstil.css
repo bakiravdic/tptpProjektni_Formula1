@@ -75,41 +75,6 @@ body.light-theme{
     --soft-red:rgba(180,0,0,0.08);
     --soft-red-dark:rgba(80,0,0,0.12);
 }
-
-/*DARK THEME*/
-/*
-body.dark-theme{
-
-    --main-bg:#0B0E11;
-    --header-bg:#06080A;
-    --footer-bg:#06080A;
-    --card-bg:#1B1F27;
-    --secondary-bg:#11151B;
-    --text-main:#FFFFFF;
-    --text-secondary:#D7D7D7;
-    --glass-bg:rgba(255,255,255,0.05);
-    --glass-border:rgba(255,255,255,0.08);
-}*/
-
-/* SYSTEM DARK MODE*/
-
-/*@media (prefers-color-scheme: dark){
-
-    body:not(.light-theme):not(.dark-theme){
-        --main-bg:#0B0E11;
-        --header-bg:#06080A;
-        --footer-bg:#06080A;
-        --card-bg:#1B1F27;
-        --secondary-bg:#11151B;
-        --text-main:#FFFFFF;
-        --text-secondary:#D7D7D7;
-        --glass-bg:rgba(255,255,255,0.05);
-        --glass-border:rgba(255,255,255,0.08);
-    }
-}*/
-
-/*RESET */
-
 *{
     margin:0;
     padding:0;
@@ -141,21 +106,6 @@ img{
 
 section{
     padding:var(--section-padding) 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-a,
-li,
-span,
-button,
-input,
-textarea,
-select{
-    font-family:var(--font-main);
 }
 
 ul{
@@ -1653,16 +1603,6 @@ footer{
     width:100%;
 }
 
-#theme-switcher{
-    padding:1rem 1.2rem;
-    border-radius:10px;
-    border:
-    1px solid rgba(255,255,255,0.08);
-    background:
-    rgba(255,255,255,0.06);
-    color:var(--text-main);
-}
-
 .footer-bottom{
     margin-top:1.5rem;
     padding-top:1rem;
@@ -1973,11 +1913,8 @@ footer{
         background-position:center top;
     }
 }
-/* FIX ZA LIGHT/DARK MODE TEKSTOVE I NEWSLETTER*/
 
-/* ---------------------------------------------------------
-   IMENA VOZAČA I POENI UVIJEK BIJELI
---------------------------------------------------------- */
+/*IMENA VOZAČA I POENI UVIJEK BIJELI*/
 
 .ranking-stavka .ime,
 .ranking-stavka .tim,
@@ -1997,12 +1934,6 @@ footer{
 body.light-theme .clanak-sekcija:first-child p{
     color:#111111 !important;
 }
-/*FORM KONTEJNER U LIGHT MODE BEZ TAMNE SJENE */
-/*body.light-theme .form-kontejner{
-    background: var(--card-bg);
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}*/
 
 body.light-theme .polje input,
 body.light-theme .polje select{
@@ -2036,9 +1967,13 @@ body.light-theme .light-logo{
     display:none;
 }
 
-//Koristen AI za pomoć pri pisanju cijelog narednog koda
+/*Koristen AI za pomoć pri pisanju cijelog narednog koda*/
 
 #theme-switcher{
+    padding:1rem 1.2rem;
+    border-radius:10px;
+    border:
+    1px solid rgba(255,255,255,0.08);
     background:var(--secondary-bg);
     color:var(--text-main);
     border:1px solid var(--glass-border);
@@ -2049,3 +1984,24 @@ body.light-theme .light-logo{
     color:var(--text-main);
 }
 
+.jump-to-top-btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    background:red;
+    
+    color:white;
+    font-size:24px;
+
+    border:none;
+    cursor:pointer;
+}
