@@ -37,79 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         });
 
-        /* =========================================================
-   HAMBURGER MENI — Toggle logika
-========================================================= */
-
-const hamburger = document.querySelector('.hamburger');
-const navigacija = document.querySelector('.navigacija');
-const navLinkovi = document.querySelectorAll('.nav-btn');
-
-hamburger.addEventListener('click', function () {
-    hamburger.classList.toggle('active');
-    navigacija.classList.toggle('active');
-});
-
-navLinkovi.forEach(function (link) {
-    link.addEventListener('click', function () {
-        navigacija.classList.remove('active');
-        hamburger.classList.remove('active');
-    });
-});
-/* =========================================================
-   THEME SWITCHER + LOCAL STORAGE
-========================================================= */
-
-const themeSwitcher = document.getElementById("theme-switcher");
-
-// Učitaj spremljenu temu
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "light") {
-    document.body.classList.add("light-theme");
-    document.body.classList.remove("dark-theme");
-    themeSwitcher.value = "light";
-}
-else if (savedTheme === "dark") {
-    document.body.classList.add("dark-theme");
-    document.body.classList.remove("light-theme");
-    themeSwitcher.value = "dark";
-}
-else {
-    document.body.classList.remove("light-theme");
-    document.body.classList.remove("dark-theme");
-    themeSwitcher.value = "system";
-}
-
-// Promjena teme
-themeSwitcher.addEventListener("change", () => {
-
-    const value = themeSwitcher.value;
-
-    if (value === "light") {
-
-        document.body.classList.add("light-theme");
-        document.body.classList.remove("dark-theme");
-
-        localStorage.setItem("theme", "light");
-    }
-
-    else if (value === "dark") {
-
-        document.body.classList.add("dark-theme");
-        document.body.classList.remove("light-theme");
-
-        localStorage.setItem("theme", "dark");
-    }
-
-    else {
-
-        document.body.classList.remove("light-theme");
-        document.body.classList.remove("dark-theme");
-
-        localStorage.setItem("theme", "system");
-    }
-});
+        
 
         jumpBtn.addEventListener("click", function() {
             window.scrollTo({
@@ -198,5 +126,77 @@ themeSwitcher.addEventListener("change", () => {
                 alert("Please enter the the text of the issue before sending an issue!");
             }
         });
+    }
+});
+
+//Koristen Claude za doradu cijelog narednog koda za hamburger meni i promjenu teme
+
+/*  HAMBURGER MENI — Toggle logika*/
+
+const hamburger = document.querySelector('.hamburger');
+const navigacija = document.querySelector('.navigacija');
+const navLinkovi = document.querySelectorAll('.nav-btn');
+
+hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('active');
+    navigacija.classList.toggle('active');
+});
+
+navLinkovi.forEach(function (link) {
+    link.addEventListener('click', function () {
+        navigacija.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+/*THEME SWITCHER + LOCAL STORAGE*/
+
+const themeSwitcher = document.getElementById("theme-switcher");
+
+// Učitaj spremljenu temu
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+    themeSwitcher.value = "light";
+}
+else if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+    document.body.classList.remove("light-theme");
+    themeSwitcher.value = "dark";
+}
+else {
+    document.body.classList.remove("light-theme");
+    document.body.classList.remove("dark-theme");
+    themeSwitcher.value = "system";
+}
+
+// Promjena teme
+themeSwitcher.addEventListener("change", () => {
+
+    const value = themeSwitcher.value;
+
+    if (value === "light") {
+
+        document.body.classList.add("light-theme");
+        document.body.classList.remove("dark-theme");
+
+        localStorage.setItem("theme", "light");
+    }
+
+    else if (value === "dark") {
+
+        document.body.classList.add("dark-theme");
+        document.body.classList.remove("light-theme");
+
+        localStorage.setItem("theme", "dark");
+    }
+
+    else {
+
+        document.body.classList.remove("light-theme");
+        document.body.classList.remove("dark-theme");
+
+        localStorage.setItem("theme", "system");
     }
 });
